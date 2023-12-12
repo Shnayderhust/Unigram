@@ -37,8 +37,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             }
         } else if (!is_input_empty($firstname, $lastname, $email, $password, $university) && !is_email_invalid($email) && !is_email_registered($unigram_conn, $email)) {
             $result = set_users($unigram_conn, $firstname, $lastname, $email, $password, $university);
-            // error_log("what are you doing\n", 3, "debug.log");
-            $_SESSION["useremail"] = $result["email"];
+            $_SESSION["useremail"] = $email;
+            error_log("useremail", 3, "./debug.log");
 
             http_response_code(200);
         }

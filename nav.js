@@ -49,13 +49,7 @@ addEventListener('click', (event) => {
 });
 
 
-addEventListener('click', (event) => {
-    if (event.target.matches('#ul')) {
-        document.getElementById('unorderd').style.display = "flex";
-    } else if (!event.target.matches('#ul')) {
-        document.getElementById('unorderd').style.display = "none";
-    }
-})
+
 
 addEventListener('click', (event) => {
     if (event.target.matches('#fileuploader')) {

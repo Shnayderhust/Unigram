@@ -1,9 +1,9 @@
 <?php
 
 $db_host = 'localhost';
-$db_name = 'unigramdb';
+$db_name = 'Unigram';
 $db_user = 'root';
-$db_password = '';
+$db_password = 'Scooper@12';
 
 try {
     $unigram_conn = new PDO("mysql:host=$db_host;dbname=$db_name", $db_user, $db_password);

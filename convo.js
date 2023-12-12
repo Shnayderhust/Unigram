@@ -18,7 +18,7 @@ function addConvo() {
 
 
 
-            fetch('convo.inc.php', {
+            fetch('convo.php', {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

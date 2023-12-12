@@ -1,5 +1,3 @@
-<!-- NOTE THIS FILE WILL HAVE MANY CHANGES IN THE FUTURE -->
-
 <?php
 require_once "chat_view.inc.php";
 require_once "friends.inc.php";
