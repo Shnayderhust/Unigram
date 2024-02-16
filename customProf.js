@@ -154,3 +154,9 @@ function displaySelectedImage() {
 
 
 }
+
+addEventListener('click', function (event) {
+    if (event.target.matches('#rudi')) {
+        document.getElementById('topprof').style.display = "none";
+    }
+})

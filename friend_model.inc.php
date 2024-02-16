@@ -43,7 +43,7 @@ function get_userfriendsdata(object $unigram_conn, $UserFriendsId)
 }
 
 // The functions below deals mainly with friend table and user table a little
-function check_userfriends(object $unigram_conn, $currentLogedInUserId, $userIdToAdd)
+function dofriend_exist(object $unigram_conn, $currentLogedInUserId, $userIdToAdd)
 {
     $query = "SELECT * FROM friends WHERE user_id = :user_id AND friend_id = :friend_id;";
 

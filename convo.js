@@ -5,7 +5,8 @@ const newchat = document.getElementById('newchat');
 document.addEventListener('DOMContentLoaded', function () {
 
     onpageloaddisplayconvo();
-    addConvo()
+    addConvo();
+    convoSearchfunction();
 
 })
 
@@ -38,7 +39,7 @@ function addConvo() {
                             tempo.style.display = "none";
                             chatslist.style.display = "block";
                             chatslist.innerHTML += displayconvo(userOneFriendData, convoId, currentLogedInUserId);
-                            const allChats = document.getElementsByClassName('onechat');
+                            // const allChats = document.getElementsByClassName('onechat');
                             console.log('convo added successfully');
 
                             // console.log('convo displayed successfully')
@@ -239,6 +240,27 @@ function doesConvorIdMatchFriendsIdFromDb(convorId, friendsId, loggedUserId) {
 
     return trimmedConvorId === friendsIdstring;
 }
+
+// const convoSearchbar = document.getElementById('convosearch');
+
+// function convoSearchfunction() {
+//     const convos = document.querySelectorAll('.onechat')
+//     console.log(convos)
+//     // This block is used for searching through users
+//     convoSearchbar.addEventListener('input', function () {
+//         const searchTerm = convoSearchbar.value.toLowerCase();
+
+//         convos.forEach(function (convo) {
+//             console.log(convo)
+//             const username = convo.getAttribute('data-receiver-username').toLowerCase();
+//             if (username.includes(searchTerm)) {
+//                 convo.style.display = 'flex';
+//             } else {
+//                 convo.style.display = 'none';
+//             }
+//         })
+//     })
+// }
 
 
 

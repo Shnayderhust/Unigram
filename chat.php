@@ -32,7 +32,7 @@ if (!isset($_SESSION["userid"])) {
 
         <section id="filepreviewbody">
             <div id="fileholder">
-                <img src="" alt="Photo Previewer" id="imagePreview">
+                <img src="./assets/UserPics/userDefaultProfile.png" alt="Photo Previewer" id="imagePreview">
             </div>
         </section>
 
@@ -59,13 +59,15 @@ if (!isset($_SESSION["userid"])) {
                         } ?>" alt="" class="myprofpic">
             <div class="nextnav">
                 <img src="assets/picsandicons/new message.svg" alt="new text" class="creatchat">
+                <img src="assets/picsandicons/moon-sleep-svgrepo-com.svg" alt="new text" id="changemode">
+                <!-- <img src="assets/picsandicons/sun-svgrepo-com.svg" alt="new text" id="changemodetolight" style="display: none;"> -->
                 <i class="fa-solid fa-ellipsis-vertical" id="ul"></i>
             </div>
         </nav>
         <div id="search">
             <div id="innersearch">
                 <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="search" placeholder="Search A Chat">
+                <input type="search" placeholder="Search A Chat" id="convosearch">
             </div>
         </div>
         <div id="chats">
@@ -368,7 +370,7 @@ if (!isset($_SESSION["userid"])) {
             <div id="usernametopprof">
                 <form enctype="multipart/form-data" id="changeusername">
                     <div id="kichwa">
-                        <i class="fa-solid fa-arrow-left" id="return"></i>
+                        <i class="fa-solid fa-arrow-left" id="rudi"></i>
                         <h2 id="title">Now Customize Your Profile</h2>
                     </div>
                     <div id="profcontainer">
@@ -393,7 +395,7 @@ if (!isset($_SESSION["userid"])) {
             <div id="biotopprof">
                 <form enctype="multipart/form-data" id="changeuserbio">
                     <div id="kichwa">
-                        <i class="fa-solid fa-arrow-left" id="return"></i>
+                        <i class="fa-solid fa-arrow-left" id="rudi"></i>
                         <h2 id="title">Now Customize Your Profile</h2>
                     </div>
                     <div id="profcontainer">

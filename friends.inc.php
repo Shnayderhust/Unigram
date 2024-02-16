@@ -40,7 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         http_response_code(200);
     } else {
 
-        if (check_userfriends($unigram_conn, $currentLogedInUserId, $userIdToAdd)) {
+        if (dofriend_exist($unigram_conn, $currentLogedInUserId, $userIdToAdd)) {
             http_response_code(400);
         } else {
             add_userfriends($unigram_conn, $currentLogedInUserId, $userIdToAdd);

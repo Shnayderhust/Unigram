@@ -1,12 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;500;600;700;800&display=swap");
 
 :root {
+  --ad: #e6f9ff;
   --color: #7f6cf4;
   --color2: #6cf4d2;
   --primary-color: #def3ff;
   --body-color: white;
   --header-color: #f5fcff00;
   --nav-color: rgba(195, 200, 210, 0.525);
+  --lightmode-background-color: rgb(255, 255, 255);
+  --lightmode-color: rgb(0, 0, 0);
+  --darkmode-background-color: #1919199d;
 }
 
 * {
@@ -30,7 +34,7 @@ body {
 body .left {
   width: 40%;
   height: 100%;
-  background-color: white;
+  background-color: var(--lightmode-background-color);
   border-right: 0.5px solid rgba(0, 0, 0, 0.139);
 }
 
@@ -97,6 +101,8 @@ body .left #search #innersearch input {
   border: none;
   outline: none;
   padding-left: 1rem;
+  /* background-color: var(--nav-color); */
+  color: var(--lightmode-color);
 }
 
 body .left #search #innersearch input::placeholder {
@@ -114,6 +120,7 @@ body .left #chats {
   align-items: center;
   height: 80%;
   width: 100%;
+  background-color: var(--lightmode-background-color);
 }
 
 body .left #chats .tempo {
@@ -207,7 +214,7 @@ body .left #chats .chatslist .onechat .message .text {
 body .right {
   width: 60%;
   height: 100%;
-  background-color: white;
+  background-color: var(--lightmode-background-color);
   display: flex;
   flex-direction: column;
   position: relative;
@@ -217,8 +224,8 @@ body .right #noactivechat {
   height: 100%;
   width: 100%;
   display: block;
-  margin-top: 14rem;
-  background-color: white;
+  padding-top: 14rem;
+  background-color: var(--lightmode-background-color);
 }
 
 body .right #noactivechat .insidenoactive {
@@ -247,7 +254,7 @@ body .right #noactivechat button {
   outline: none;
   font-size: 1.2rem;
   color: var(--color);
-  background-color: white;
+  background-color: var(--lightmode-background-color);
   margin-top: 1rem;
   cursor: pointer;
 }
@@ -260,7 +267,7 @@ body .right #noactivechat button:hover {
 body .right #activechat {
   height: 100vh;
   width: 100%;
-  background-color: white;
+  background-color: var(--lightmode-background-color);
 }
 
 body .right #activechat #activechatspace {
@@ -269,7 +276,7 @@ body .right #activechat #activechatspace {
   right: -100%;
   height: 100%;
   width: 60%;
-  background-color: white;
+  background-color: var(--lightmode-background-color);
   transition: 0.8s;
   z-index: 10;
 }
@@ -315,7 +322,7 @@ body .right #activechat #activechatspace .messagespace {
   padding-right: 1rem;
   padding-bottom: 0.5rem;
   padding-top: 0.5rem;
-  /* background-color: #292929; */
+  background-color: var(--lightmode-background-color);
   background-image: url(./picsandicons/UnigramTheme01.png);
   background-size: contain;
 }
@@ -462,7 +469,7 @@ body .right #activechat #activechatspace .chatspace #sendtextcontainer {
   outline: none;
   /* padding-left: 2rem; */
   margin-left: 1rem;
-  background-color: white;
+  background-color: var(--lightmode-background-color);
 }
 
 body
@@ -478,6 +485,8 @@ body
   border: none;
   outline: none;
   padding-left: 1rem;
+  background-color: var(--lightmode-background-color);
+  color: var(--lightmode-color);
 }
 
 #sendicon {
@@ -586,7 +595,7 @@ body .right #friendrequests #allfriendRequests #friendrequestlist {
 body #newchat {
   display: block;
   position: fixed;
-  background-color: white;
+  background-color: var(--lightmode-background-color);
   top: 0;
   left: -100%;
   height: 100vh;
@@ -619,7 +628,7 @@ body #newchat #header p {
 body #newchat #usernav {
   width: 100%;
   height: 3.5rem;
-  background-color: white;
+  background-color: var(--lightmode-background-color);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -645,6 +654,8 @@ body #newchat #usernav .innerusernav input {
   border: none;
   outline: none;
   padding-left: 1rem;
+  background-color: var(--lightmode-background-color);
+  color: var(--lightmode-color);
 }
 
 body #newchat #friendsearchresult {
@@ -655,7 +666,7 @@ body #newchat #friendsearchresult {
   position: absolute;
   top: 13rem;
   left: 2rem;
-  background-color: white;
+  background-color: var(--lightmode-background-color);
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.139);
   margin-bottom: 0.5rem;
   overflow-y: scroll;
@@ -674,7 +685,7 @@ body #newchat .noresult {
   position: absolute;
   top: 13rem;
   left: 2rem;
-  background-color: white;
+  background-color: var(--lightmode-background-color);
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.139);
   margin-bottom: 0.5rem;
   overflow-y: scroll;
@@ -715,7 +726,7 @@ body #newchat #friendsearchresult .onefriend .addfriend {
   width: 4rem;
   height: 2.1rem;
   border: 1px solid rgba(0, 0, 0, 0.26);
-  background-color: white;
+  background-color: var(--lightmode-background-color);
   border-radius: 0.5rem;
   color: #7f6cf4;
   cursor: pointer;
@@ -737,6 +748,7 @@ body #newchat #users {
   padding-left: 1rem;
   padding-right: 1rem;
   height: 70%;
+  background-color: var(--lightmode-background-color);
 }
 
 body #newchat #users h2 {
@@ -749,7 +761,7 @@ body #newchat #userfriendlist {
   width: 100%;
   height: 100%;
   overflow-y: scroll;
-  background-color: white;
+  background-color: var(--lightmode-background-color);
   margin-bottom: 0.5rem;
   padding-top: 1rem;
   padding-bottom: 5rem;
@@ -788,7 +800,7 @@ body #newchat #userfriendlist .userfriend .chat {
   width: 4rem;
   height: 2.1rem;
   border: 1px solid rgba(0, 0, 0, 0.26);
-  background-color: white;
+  background-color: var(--lightmode-background-color);
   border-radius: 0.5rem;
   color: #7f6cf4;
   cursor: pointer;
@@ -804,7 +816,7 @@ body #newchat #userfriendlist .userfriend .remove {
   width: 4rem;
   height: 2.1rem;
   border: 1px solid rgba(0, 0, 0, 0.26);
-  background-color: white;
+  background-color: var(--lightmode-background-color);
   border-radius: 0.5rem;
   color: #7f6cf4;
   cursor: pointer;
@@ -830,7 +842,7 @@ body #unorderd {
   width: 10rem;
   height: 12rem;
   border-radius: 0.5rem;
-  background-color: white;
+  background-color: var(--lightmode-background-color);
   left: 31rem;
   top: 3rem;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
@@ -876,7 +888,7 @@ body #unorderd ul li:first-child:hover {
 body #settings {
   display: block;
   position: fixed;
-  background-color: white;
+  background-color: var(--lightmode-background-color);
   top: 0;
   left: -100%;
   height: 100vh;
@@ -887,7 +899,6 @@ body #settings {
 
 body #settings #sethead {
   height: 10rem;
-  background-color: white;
   width: 100%;
   display: flex;
   align-items: center;
@@ -905,7 +916,7 @@ body #settings #sethead i {
 body #settings #setnav {
   width: 100%;
   height: 4rem;
-  background-color: white;
+  background-color: var(--lightmode-background-color);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -931,6 +942,8 @@ body #settings #setnav .innersetnav input {
   border: none;
   outline: none;
   padding-left: 1rem;
+  background-color: var(--lightmode-background-color);
+  color: var(--lightmode-color);
 }
 
 body #settings #setlist {
@@ -1019,7 +1032,7 @@ body #settings #setlist button {
   width: 80%;
   height: 4rem;
   border-radius: 0.5rem;
-  background-color: white;
+  background-color: var(--lightmode-background-color);
   border: 1px solid var(--color);
   font-size: 1.3rem;
   margin-bottom: 7rem;
@@ -1036,7 +1049,7 @@ body #settings #setlist button:hover {
 body #profile {
   display: block;
   position: fixed;
-  background-color: white;
+  background-color: var(--lightmode-background-color);
   top: 0;
   left: -100%;
   height: 100vh;
@@ -1072,7 +1085,7 @@ body #profile #profpicture {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: white;
+  background-color: var(--lightmode-background-color);
 }
 
 body #profile #profpicture #userprofile {
@@ -1116,11 +1129,11 @@ body #profile #profpicture #userprofileimage:hover + #topprofdiv {
 }
 
 body #profile #name-bio {
-  width: 90%;
+  width: 100%;
   height: 15rem;
-  border-radius: 1rem;
   padding-left: 2rem;
-  background-color: white;
+  padding-right: 2rem;
+  background-color: var(--lightmode-background-color);
   padding-top: 3rem;
 }
 
@@ -1212,7 +1225,7 @@ body #logoutform #logoutdiv {
   padding-left: 1rem;
   display: flex;
   justify-content: space-between;
-  background-color: white;
+  background-color: var(--lightmode-background-color);
 }
 
 body #logoutform #logoutdiv #diva {
@@ -1238,7 +1251,7 @@ body #logoutform #logoutdiv #divb {
 body #logoutform #logoutdiv button {
   width: 100%;
   height: 3rem;
-  background-color: white;
+  background-color: var(--lightmode-background-color);
   border-radius: 0.5rem;
   border: 1px solid rgba(0, 0, 0, 0.445);
   margin-left: 0.3rem;
@@ -1295,7 +1308,7 @@ body #logoutform #logoutdiv button:last-child:hover {
 }
 
 #fileuploaderdropdown label:hover {
-  background-color: white;
+  background-color: var(--lightmode-background-color);
   color: #7e6cf4;
   font-size: 1.3rem;
   cursor: pointer;
@@ -1336,7 +1349,7 @@ body #logoutform #logoutdiv button:last-child:hover {
 #filepreviewbody #fileholder {
   width: 100%;
   height: 100%;
-  background-color: white;
+  background-color: var(--lightmode-background-color);
   border-radius: 1rem;
   border: 2px solid var(--color);
   display: flex;
@@ -1542,10 +1555,11 @@ cancel .friendcontainer .requestprof .req-details .req-friendbio {
   border-radius: 1rem;
   margin-bottom: 1rem;
   padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: white;
+  background-color: var(--lightmode-background-color);
   overflow-y: scroll;
 }
 
@@ -1569,7 +1583,7 @@ cancel .friendcontainer .requestprof .req-details .req-friendbio {
   background-color: rgb(255, 215, 215);
   border-radius: 0.5rem;
   outline: 3px solid red;
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
@@ -1627,7 +1641,7 @@ section {
   height: 3.5rem;
   border-radius: 0.5rem;
   border: 1px solid rgba(0, 0, 0, 0.342);
-  background-color: white;
+  background-color: var(--lightmode-background-color);
   font-weight: 500;
   padding-left: 1rem;
   padding-right: 1rem;
@@ -1687,7 +1701,7 @@ section {
   display: block;
   width: 10rem;
   height: 3rem;
-  background-color: #ffffff;
+  background-color: var(--lightmode-background-color);
   color: #7f6cf4;
   border: 1px solid rgba(56, 55, 55, 0.511);
   border-radius: 0.4rem;
@@ -1711,7 +1725,7 @@ section {
   display: block;
   width: 10rem;
   height: 3rem;
-  background-color: #ffffff;
+  background-color: var(--lightmode-background-color);
   color: #7f6cf4;
   border: 1px solid rgba(56, 55, 55, 0.511);
   border-radius: 0.4rem;

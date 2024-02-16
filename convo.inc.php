@@ -43,7 +43,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         echo json_encode($response);
         http_response_code(202);
-    } else if ($convoPackage->chatflag === 'deleteChat') {
     } else {
         add_convo($unigram_conn, $currentLogedInUserId, $convoPackage);
 
