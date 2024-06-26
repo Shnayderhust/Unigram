@@ -1,0 +1,220 @@
+@font-face {
+  font-family: "Poppins";
+  font-weight: 100;
+  src: url("./poppins/Poppins-Thin.ttf");
+}
+@font-face {
+  font-family: "Poppins";
+  font-weight: 200;
+  src: url("./poppins/Poppins-ExtraLight.ttf");
+}
+@font-face {
+  font-family: "Poppins";
+  font-weight: 300;
+  src: url("./poppins/Poppins-Light.ttf");
+}
+@font-face {
+  font-family: "Poppins";
+  font-weight: 400;
+  src: url("./poppins/Poppins-Regular.ttf");
+}
+@font-face {
+  font-family: "Poppins";
+  font-weight: 500;
+  src: url("./poppins/Poppins-Medium.ttf");
+}
+@font-face {
+  font-family: "Poppins";
+  font-weight: 600;
+  src: url("./poppins/Poppins-SemiBold.ttf");
+}
+@font-face {
+  font-family: "Poppins";
+  font-weight: 700;
+  src: url("./poppins/Poppins-Bold.ttf");
+}
+
+:root {
+  --color: #7e6cf4c5;
+  --primary-color: #a2d3ed;
+  --body-color: #f5fcff;
+  --header-color: #f5fcff00;
+  --test: #5cffcb;
+  --black: black;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+
+body {
+  background-color: var(--body-color);
+  width: 100vw;
+  height: 100vh;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+header {
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  backdrop-filter: blur(12px);
+}
+
+header .logo {
+  margin-left: 2rem;
+}
+
+header .logo p {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 3rem;
+  background: linear-gradient(to right, #7e6cf4 30%, var(--test));
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+header .logo p img {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-right: 0.5rem;
+}
+
+#logo:hover {
+  filter: drop-shadow(0 0 0.5rem rgba(100, 108, 255, 0.98));
+}
+
+header ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 30rem;
+  height: 3rem;
+  border-radius: 1.5rem;
+  backdrop-filter: blur(18px);
+  background-color: var(--header-color);
+}
+
+header ul li {
+  font-size: 1.3rem;
+}
+header .reg {
+  margin-right: 1rem;
+}
+
+.reg button {
+  width: 8rem;
+  height: 3rem;
+  border: none;
+  border-radius: 1.5rem;
+  font-size: 1.3rem;
+  color: var(--black);
+  background-color: var(--body-color);
+  filter: drop-shadow(0 0 0.1rem #646cfffa);
+  cursor: pointer;
+}
+.reg > button:hover {
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+    rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+    rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+
+header .reg button:last-child {
+  margin-left: 1rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#wrapper {
+  display: flex;
+  height: 50rem;
+  align-items: center;
+}
+
+#mainsvg {
+  width: 22rem;
+  height: 22rem;
+  margin-right: 5rem;
+}
+
+#mainsvg:hover {
+  filter: drop-shadow(0 0 2rem #646cfffa);
+}
+
+#s_p {
+  font-weight: 600;
+  font-size: 4rem;
+  overflow: hidden;
+  background: linear-gradient(to right, #7e6cf4 20%, var(--test));
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+}
+
+#s_p::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--body-color);
+  border-left: 2px solid black;
+  animation: typing 3s steps(30) infinite;
+}
+
+@keyframes typing {
+  40%,
+  60% {
+    left: calc(100% + 30px);
+  }
+  100% {
+    left: 0;
+  }
+}
+
+.parag > p {
+  font-size: 1.5rem;
+}
+
+.parag > button {
+  width: 12rem;
+  height: 3rem;
+  border: none;
+  border-radius: 1.5rem;
+  font-size: 1.3rem;
+  color: var(--black);
+  background-color: var(--body-color);
+  filter: drop-shadow(0 0 0.1rem #646cfffa);
+  cursor: pointer;
+}
+
+.parag > button:hover {
+  color: white;
+  font-size: 1.5rem;
+  /* box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+    rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+    rgba(255, 255, 255, 0.08) 0px 1px 0px inset; */
+  background: linear-gradient(to right, #fff 0.01%, #b1a6f6 30%, #5cffcb);
+}
+
+#wrapper2 {
+  width: 100%;
+  height: 50rem;
+}

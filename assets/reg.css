@@ -1,0 +1,521 @@
+@font-face {
+  font-family: "Poppins";
+  font-weight: 100;
+  src: url("./poppins/Poppins-Thin.ttf");
+}
+@font-face {
+  font-family: "Poppins";
+  font-weight: 200;
+  src: url("./poppins/Poppins-ExtraLight.ttf");
+}
+@font-face {
+  font-family: "Poppins";
+  font-weight: 300;
+  src: url("./poppins/Poppins-Light.ttf");
+}
+@font-face {
+  font-family: "Poppins";
+  font-weight: 400;
+  src: url("./poppins/Poppins-Regular.ttf");
+}
+@font-face {
+  font-family: "Poppins";
+  font-weight: 500;
+  src: url("./poppins/Poppins-Medium.ttf");
+}
+@font-face {
+  font-family: "Poppins";
+  font-weight: 600;
+  src: url("./poppins/Poppins-SemiBold.ttf");
+}
+@font-face {
+  font-family: "Poppins";
+  font-weight: 700;
+  src: url("./poppins/Poppins-Bold.ttf");
+}
+
+:root {
+  /* #5141bd */
+  --color: #7f6cf4;
+  --primary-color: #def3ff;
+  --body-color: white;
+  --header-color: #f5fcff00;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  background-color: var(--body-color);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.left {
+  overflow-y: scroll;
+  overflow-x: none;
+  width: 40%;
+  height: 100%;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+}
+
+.left #header {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.left #header #h1 {
+  padding-top: 3rem;
+  font-size: 2rem;
+  cursor: pointer;
+  display: flex;
+  height: auto;
+  align-items: center;
+}
+
+.left #header #h1 #img {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 0.5rem;
+}
+
+.left #header #google {
+  width: 80%;
+  height: 3.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid black;
+  background-color: white;
+  font-size: 1.2rem;
+  font-weight: 500;
+  box-shadow: 0 4px 6px rgba(149, 186, 255, 0.45);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  color: black;
+}
+
+.left #bottom {
+  height: 10rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.left #finalButt {
+  width: 80%;
+  height: 3.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+  background-color: var(--color);
+  cursor: pointer;
+}
+
+.left #header #google:hover {
+  box-shadow: 0 6px 8px rgba(149, 186, 255, 0.674);
+  background-color: rgba(178, 205, 255, 0.192);
+  cursor: pointer;
+}
+
+.left #header .div {
+  width: 100%;
+  height: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding-top: 3rem;
+}
+
+.left #header .div hr {
+  width: 40%;
+  background-color: black;
+  height: 2px;
+  margin: 0;
+}
+
+.left #header .div span {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.left #header #errorcontainer {
+  margin-top: 2.5rem;
+  height: auto;
+  width: 80%;
+  background-color: rgb(255, 215, 215);
+  border-radius: 0.5rem;
+  outline: 3px solid red;
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.left #header #loginerror {
+  margin-top: 2.5rem;
+  height: auto;
+  width: 80%;
+  background-color: rgb(255, 215, 215);
+  border-radius: 0.5rem;
+  outline: 3px solid red;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.left #header #loginerror #loginerrormessage {
+  justify-items: end;
+  color: red;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.left #header #errorcontainer .errormessage {
+  justify-items: end;
+  color: red;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.left #header #normalsignup {
+  display: none;
+}
+
+.left #header #signupsuccess {
+  margin-top: 2.5rem;
+  height: auto;
+  width: 80%;
+  background-color: rgb(230, 255, 232);
+  border-radius: 1rem;
+  outline: 3px solid rgb(21, 255, 83);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.left #header #signupsuccess .signupsuccessmessage {
+  color: black;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.left #regform {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.left #regform section {
+  height: max-content;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1.5rem;
+}
+
+.left #regform section:focus-within label {
+  color: var(--color);
+  font-weight: 600;
+}
+
+#title {
+  margin-top: 3rem;
+}
+
+#bigcontainer {
+  width: 100%;
+  height: auto;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* padding-top: 2rem; */
+}
+
+#topprof {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0);
+  backdrop-filter: blur(18px);
+}
+
+#topprof #kichwa {
+  display: flex;
+  align-items: baseline;
+}
+
+#topprof #kichwa h2 {
+  margin-left: 1rem;
+}
+
+#profcontainer {
+  width: 40%;
+  height: auto;
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  padding-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  overflow-y: scroll;
+}
+
+#topprof #bigcontainer #profcontainer #proferrorcontainer {
+  height: auto;
+  width: 80%;
+  background-color: rgb(255, 215, 215);
+  border-radius: 0.5rem;
+  outline: 3px solid red;
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.explainingtext {
+  color: #7f6cf4;
+  margin-bottom: 0.5rem;
+}
+
+#bigcontainer #profcontainer div#uploaderror {
+  border: 2px solid red;
+  width: 80%;
+  height: auto;
+}
+
+section {
+  height: max-content;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1.5rem;
+}
+
+#profname:focus-within label {
+  color: var(--color);
+  font-weight: 600;
+}
+
+#profcontainer #profname {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#profcontainer #profname #usernamelabel {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+#profcontainer #profname #biolabel {
+  font-size: 1.3rem;
+}
+
+#profcontainer #profname input {
+  width: 80%;
+  height: 3.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.342);
+  background-color: white;
+  font-weight: 200;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-size: 1rem;
+}
+
+#profcontainer #profname input::placeholder {
+  color: #76709f;
+  font-weight: 300;
+}
+
+#profcontainer #profname input:focus-visible {
+  outline: none;
+  border: 1px solid #7e6cf481;
+  box-shadow: 0 6px 6px rgba(149, 186, 255, 0.674);
+}
+
+#profcontainer #profname input:focus::placeholder {
+  color: #7f6cf4;
+  font-weight: 400;
+}
+
+#profcontainer .profcustom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#profcontainer .profcustom #profpic {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+#profcontainer .profcustom #profpic img {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+}
+
+#profcontainer .profcustom #buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#profcontainer .profcustom #buttons #chooseprof {
+  display: none;
+  width: auto;
+  height: auto;
+  border: none;
+}
+
+#profcontainer .profcustom #buttons #fileLabel {
+  display: block;
+  width: 10rem;
+  height: 3rem;
+  background-color: #ffffff;
+  color: #7f6cf4;
+  border: 1px solid rgba(56, 55, 55, 0.511);
+  border-radius: 0.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+#profcontainer .profcustom #buttons #fileLabel:hover {
+  box-shadow: 0 4px 4px rgba(126, 108, 244, 0.721);
+  border: 1px solid #7f6cf4;
+}
+
+#profcontainer .profcustom #buttons #kusanya {
+  display: none;
+}
+
+#profcontainer .profcustom #buttons #kusanyalabel {
+  display: block;
+  width: 10rem;
+  height: 3rem;
+  background-color: #ffffff;
+  color: #7f6cf4;
+  border: 1px solid rgba(56, 55, 55, 0.511);
+  border-radius: 0.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+#profcontainer .profcustom #buttons #kusanyalabel:hover {
+  box-shadow: 0 4px 4px rgba(126, 108, 244, 0.721);
+  border: 1px solid #7f6cf4;
+}
+
+.left #regform input {
+  width: 100%;
+  height: 3.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.342);
+  background-color: white;
+  font-weight: 500;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-size: 1rem;
+}
+
+.left #regform input::placeholder {
+  color: #76709f;
+  font-weight: 300;
+}
+
+.left #regform input:focus-visible {
+  outline: none;
+  border: 1px solid #7e6cf481;
+  box-shadow: 0 6px 6px rgba(149, 186, 255, 0.674);
+}
+
+.left #regform input:focus::placeholder {
+  color: #7f6cf4;
+  font-weight: 400;
+}
+
+.left p {
+  margin-top: 0.5rem;
+}
+
+.left p span {
+  color: var(--color);
+  margin-left: 0.2rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.right {
+  width: 60%;
+  height: 100%;
+  background-color: var(--color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1.3rem;
+}
+
+#return {
+  cursor: pointer;
+}
+
+#rightlogo {
+  width: 6rem;
+  height: 6rem;
+  margin-right: 0.5rem;
+}
